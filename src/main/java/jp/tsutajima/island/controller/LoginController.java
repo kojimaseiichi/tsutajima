@@ -1,11 +1,11 @@
-package jp.tsutajima.people.controller;
+package jp.tsutajima.island.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/login")
+@RequestMapping({"/login", "/"})
 public class LoginController {
 
 	private static final String VIEW_NAME = "login";
@@ -18,6 +18,6 @@ public class LoginController {
 	
 	@RequestMapping("authenticate")
 	public String viewAuthenticate(Model model) {
-		return "index";
+		return "redirect:/port";
 	}
 }
